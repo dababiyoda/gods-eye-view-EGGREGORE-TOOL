@@ -30,6 +30,14 @@ function createRealtimeTokenHandler({
       return;
     }
 
+    // Existing keys cannot implicitly enable paid realtime speech.
+    if ((process.env.LLM_PROVIDER || 'ollama').toLowerCase() !== 'openai') {
+      res.statusCode = 503;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Local realtime voice is not configured; use manual controls. See docs/LOCAL_AI.md.' }));
+      return;
+    }
+
     // Opt-in per-IP throttle (GEV_RATELIMIT_OPENAI_PER_MIN). No-op when unset.
     if (!enforceOptInRateLimit(openAiRateLimiter(), req, res)) return;
 
