@@ -97,6 +97,8 @@ test('does not hide real provider and HTTP failures', () => {
 });
 
 test('the installed keyless HUD route stays successful after the voice quota is exhausted', async () => {
+  const previousProvider = process.env.LLM_PROVIDER;
+  process.env.LLM_PROVIDER = 'openai';
   const previousKey = process.env.OPENAI_API_KEY;
   const previousLimit = process.env.GEV_RATELIMIT_OPENAI_PER_MIN;
   process.env.OPENAI_API_KEY = '';
@@ -122,6 +124,8 @@ test('the installed keyless HUD route stays successful after the voice quota is 
       assert.deepEqual(response.body, UNCONFIGURED_PAYLOAD);
     }
   } finally {
+    if (previousProvider === undefined) delete process.env.LLM_PROVIDER;
+    else process.env.LLM_PROVIDER = previousProvider;
     if (previousKey === undefined) delete process.env.OPENAI_API_KEY;
     else process.env.OPENAI_API_KEY = previousKey;
     if (previousLimit === undefined) delete process.env.GEV_RATELIMIT_OPENAI_PER_MIN;
