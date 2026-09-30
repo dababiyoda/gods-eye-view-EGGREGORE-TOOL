@@ -4,6 +4,11 @@
 
 [![CI](https://github.com/bilawalsidhu/gods-eye-view/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bilawalsidhu/gods-eye-view/actions/workflows/ci.yml)
 
+**Egregore local AI:** HUD summaries can use Ollama + Qwen3.5-4B.
+See [local AI setup](docs/LOCAL_AI.md). Paid realtime voice now requires explicit
+`LLM_PROVIDER=openai`; adding a key alone does not enable billing. Local
+realtime speech is still an integration gap.
+
 ### A spy-satellite simulator in your browser — then you realize the sources are public and the data is real.
 
 Photorealistic 3D globe. Live aircraft, ships, satellites, earthquakes, traffic, and public cameras. Hands-free voice control powered by a realtime AI agent.
