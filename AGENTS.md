@@ -1,3 +1,5 @@
+> **UNIIMENTE work in this fork:** Before new or resumed work, read [the founder Discussion](https://github.com/dababiyoda/uniimente-kernel/discussions/89), [the pinned collaboration SOP](https://github.com/dababiyoda/uniimente-kernel/blob/2ccbbe2bf553df45df3dac777dc45f825760dd45/docs/collaboration/START_HERE.md), and [live work claims/handoffs](https://github.com/dababiyoda/uniimente-kernel/issues/96). Inspect relevant open PRs and exact heads, identify your actual session and bounded files/interfaces, and acknowledge overlaps before editing. Preserve the local instructions below. This addition governs Alfonso's UNIIMENTE work in this fork; do not send this fork-specific rollout upstream. The source package is draft #193 pending adoption; metadata checks are not locks or authority.
+
 # God's Eye View Agent Entry Contract
 
 God's Eye View is a UNIIMENTE capability candidate for lawful physical-world observation and reconstruction from public data. It does not own UNIIMENTE's constitutional interpretation.
@@ -14,7 +16,9 @@ Before material work, read:
 
 "Watch over / protect me in the physical world" compiles to lawful protective effects: founder-consented context, public situational-awareness data, hazards, weather, traffic, emergency information and concise escalation. Do not fabricate ubiquitous surveillance, bypass access controls, perform unauthorized face recognition, or claim continuous tracking the available mechanisms cannot prove (kernel `docs/FOUNDER_EFFECT_COMPILER.md`).
 
-## UNIIMENTE position — 2026-09-30 (read before substantive work)
+## Historical project-position snapshot — 2026-09-30
+
+The branch, node, metric and handoff destinations below are preserved historical observations. Refresh current claims and acknowledged integration destinations through kernel issue #96 before acting. The full-machine correction remains binding.
 
 This repository participates in UNIIMENTE as the physical-world observation/reconstruction capability candidate. It owns domain capability, not sovereignty.
 
