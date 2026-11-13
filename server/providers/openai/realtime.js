@@ -34,7 +34,12 @@ function createRealtimeTokenHandler({
     if ((process.env.LLM_PROVIDER || 'ollama').toLowerCase() !== 'openai') {
       res.statusCode = 503;
       res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Local realtime voice is not configured; use manual controls. See docs/LOCAL_AI.md.' }));
+      res.end(
+        JSON.stringify({
+          error:
+            'Local realtime voice is not configured; use manual controls. See docs/LOCAL_AI.md.',
+        }),
+      );
       return;
     }
 
